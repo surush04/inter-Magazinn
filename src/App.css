@@ -1,0 +1,24 @@
+.bg1 {
+    background-image: url("src/img/headphones-isolated-on-green-background-free-video.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+.bg2 {
+    background-image: url("src/img/maxresdefault (1).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+.bg3 {
+    background-image: url("src/img/background-69672_640.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
