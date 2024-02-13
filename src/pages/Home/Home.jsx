@@ -18,6 +18,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { getcategories, getproducts } from "../../api/Home/HomeApi";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { addCart } from "../../api/Basket/BasketApi";
 
 const Home = () => {
   // swiper
@@ -37,6 +38,7 @@ const Home = () => {
 
   const data = useSelector((store) => store.Home.data);
   const data2 = useSelector((store) => store.Home.data2);
+  const cart = useSelector((store) => store.Home.cart);
   
 
   return (
@@ -117,25 +119,24 @@ const Home = () => {
                 />
 
                 <div className="flex gap-4">
-                  <p className="font-extrabold my-[10px]">{elem?.price}</p>
+                  <p className="font-extrabold my-[10px]">{elem.price}</p>
                   <p
                     className="font-extrabold text-slate-500 text-d my-[10px]"
                     style={{ textDecoration: "line-through" }}
                   >
-                    {elem?.discountPrice}
+                    {elem.discountPrice}
                   </p>
                 </div>
-                <h1 className="my-[10px] font-semibold">{elem?.productName}</h1>
-                <Link to={"/Basket"}>
+                <h1 className="my-[10px] font-semibold">{elem.productName}</h1>
+               
                   <Button
-                    onClick={() => dispatch(addCart(el.id))}
+                    onClick={() => dispatch(addCart(elem.id))}
                     variant="contained"
                     color="success"
                   >
                     <ShoppingCartOutlinedIcon className="hover:text-green-600 w-[200px]"></ShoppingCartOutlinedIcon>{" "}
                     В корзину
                   </Button>
-                </Link>
               </div>
             </>
           );

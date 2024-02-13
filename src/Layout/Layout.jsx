@@ -49,7 +49,7 @@ import { data } from "autoprefixer";
 import { setSubData } from "../reducers/Home/Home";
 import { Modal, TextField } from "@mui/material";
 import { axiosRequest } from "../utils/axiosRequest";
-import{saveToken}from"../../src/utils/token"
+import { saveToken } from "../../src/utils/token";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {

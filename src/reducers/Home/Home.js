@@ -52,8 +52,8 @@ let Home = createSlice({
     builder.addCase(getproductsfromcart.rejected, (state, action) => {
       state.loading.false;
     });
-    //addCart
-    builder.addCase(getCart.fulfilled, (state, action) => {
+    //getCart
+    builder.addCase(addCart.fulfilled, (state, action) => {
       // console.log(action.payload);
       state.loading = false;
       state.cart = action.payload;
