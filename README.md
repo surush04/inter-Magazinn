@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 "# inter-Magazin" 
 "# inter-Magazinn" 
 "# InrernetMagazin" 
+"# InrernetMagazin" 
